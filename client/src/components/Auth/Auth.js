@@ -7,12 +7,12 @@ import {
 	Paper,
 	Typography,
 } from "@mui/material";
-import { GoogleLogin } from "react-google-login";
+// import { GoogleLogin } from "react-google-login";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Input from "./Input";
-import Icon from "./icon";
+// import Icon from "./icon";
 
 import classes from "./style";
 import { signin, signup } from "../../actions/auth";
@@ -54,13 +54,13 @@ const Auth = () => {
 		setIsSignup((prevIsSignup) => !prevIsSignup);
 		setShowPassword(false);
 	};
-	const googleSuccess = async (res) => {
-		console.log(res);
-	};
-	const googleFailure = (error) => {
-		console.log(error);
-		console.log("Google Sign In was unsuccessful. Try Again Later");
-	};
+	// const googleSuccess = async (res) => {
+	// 	console.log(res);
+	// };
+	// const googleFailure = (error) => {
+	// 	console.log(error);
+	// 	console.log("Google Sign In was unsuccessful. Try Again Later");
+	// };
 	return (
 		<Container component="main" maxWidth="xs">
 			<Paper sx={classes.paper} elevation={3}>
@@ -118,7 +118,7 @@ const Auth = () => {
 					>
 						{isSignup ? "Sign Up" : "SIgn In"}
 					</Button>
-					<GoogleLogin
+					{/* <GoogleLogin
 						clientId="470964429577-acfg95h2ha7v6r4eactdn2ou6sa1g2t1.apps.googleusercontent.com"
 						render={(renderProps) => (
 							<Button
@@ -136,7 +136,7 @@ const Auth = () => {
 						onSuccess={googleSuccess}
 						onFailure={googleFailure}
 						cookiePolicy={"single_host_origin"}
-					/>
+					/> */}
 					<Grid container justifyContent="flex-end">
 						<Grid item>
 							<Button onClick={switchMode}>
